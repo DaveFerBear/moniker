@@ -1,0 +1,66 @@
+html{
+      font-family: arial;
+}
+
+.socialListContainer {
+    width: 350px;
+    border: 1px solid #afafaf;
+}
+
+.socialListContainer .social {
+    height: 80px;
+    border-bottom: 1px solid #afafaf;
+}
+
+.socialListContainer .social:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.socialListContainer .social img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.socialListContainer .social .text {
+    line-height: 80px;
+    margin-left: 10px;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.socialListContainer .social input {
+    border: 1px solid #afafaf;
+    height: 27px;
+    padding-left: 5px;
+}
+
+.submit {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #afafaf;
+    display: block;
+    width: 50px;
+    cursor: pointer;
+    color: #6f6f6f;
+}
+
+.errorContainer {
+    display: none;
+    background-color: red;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.errorContainer .text {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    line-height: 30px;
+}
