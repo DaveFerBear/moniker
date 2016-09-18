@@ -14,47 +14,14 @@ html {
     margin-top: 3%;
 }
 
-.socialListContainer {
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-.socialListContainer .social {
-    height: 80px;
-    border-bottom: 1px solid #afafaf;
-}
-
-.socialListContainer .social:last-child {
-    border-bottom: 1px solid transparent;
-}
-
-.socialListContainer .social img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin-left: 20px;
-}
-
-.socialListContainer .social .text {
-    line-height: 80px;
-    margin-left: 10px;
-    min-width: 80px;
-    display: inline-block;
-}
-
-.socialListContainer .social input {
-    border: 1px solid #afafaf;
-    height: 27px;
-    padding-left: 5px;
+.socialImage {
+    height: 60px;
 }
 
 .submit {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
     padding: 5px 10px;
     border: 1px solid #afafaf;
     display: block;
