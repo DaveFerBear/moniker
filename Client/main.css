@@ -1,10 +1,24 @@
-html{
-      font-family: arial;
+html {
+    font-family: arial;
+    background-color: white;
+}
+
+.titleContainer {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "Courier";
+    font-size: 400%;
+    margin-top: 3%;
 }
 
 .socialListContainer {
-    width: 350px;
-    border: 1px solid #afafaf;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .socialListContainer .social {
@@ -38,6 +52,9 @@ html{
 
 .submit {
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     padding: 5px 10px;
     border: 1px solid #afafaf;
     display: block;
