@@ -15,19 +15,22 @@ html {
 }
 
 .socialImage {
-    height: 60px;
+    height: 10%;
+    margin: 20px;
 }
 
 .submit {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px 10px;
+    height: 10%;
+    width: 100%;
+    background-color: red;
     border: 1px solid #afafaf;
-    display: block;
-    width: 50px;
-    cursor: pointer;
-    color: #6f6f6f;
+    background-color: grey;
+    text-align: center;
+}
+
+#submitText {
+    height: 100%;
+    vertical-align: middle;
 }
 
 .errorContainer {
