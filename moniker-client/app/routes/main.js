@@ -30,7 +30,7 @@ export default Ember.Route.extend({
             logo: "http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png"
         },
         {
-            name: "Snapcahat",
+            name: "Snapchat",
             color: "yellow",
             logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Snapchat_Logo.png/480px-Snapchat_Logo.png"
         }
