@@ -33,6 +33,16 @@ export default Ember.Route.extend({
             name: "Snapchat",
             color: "yellow",
             logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Snapchat_Logo.png/480px-Snapchat_Logo.png"
+        },
+        {
+            name: "Pinterest",
+            color: "rgb(247, 156, 162)",
+            logo: "http://www.homeloans.com.au/wp-content/uploads/2015/10/social-media-icon-pinterest.png"
+        },
+        {
+            name: "Tumblr",
+            color: "rgb(41, 80, 107)",
+            logo: "http://www.freeiconspng.com/uploads/tumblr-logo-icon-1.png"
         }
         ];    
     }
