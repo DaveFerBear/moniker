@@ -6,9 +6,32 @@
 }
 
 .network {
-    height: 200px;
+    height: 160px;
+    text-align: center;
 }
 
 .network img {
     width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.network p {
+    float: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.network #spinner { 
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(220, 220, 200, .3);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
