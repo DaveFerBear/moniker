@@ -1,0 +1,14 @@
+.title {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(230,230,230);
+    padding: 50px;
+}
+
+.network {
+    height: 200px;
+}
+
+.network img {
+    width: 50px;
+}
