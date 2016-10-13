@@ -1,9 +1,14 @@
 <div class = "container-fluid">
-    {{title-object}}
+    <div class = "row-fluid">
+        {{title-object}}
+    </div>
     <div class = "row-fluid">
         {{#each model as |network|}}
                 {{network-input attr = network}} 
         {{/each}}
+    </div>
+    <div class = "row-fluid">
+        {{submit-object}}
     </div>
 </div> 
 {{outlet}}

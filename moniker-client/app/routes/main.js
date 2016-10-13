@@ -6,7 +6,8 @@ export default Ember.Route.extend({
         {
             name: "Facebook",
             color: "rgb(1, 38, 119)",
-            logo: "http://www.pngall.com/wp-content/uploads/2016/07/Facebook.png"
+            logo: "http://www.pngall.com/wp-content/uploads/2016/07/Facebook.png",
+            textColor: "white"
         },
         {
             name: "Twitter",
@@ -35,6 +36,11 @@ export default Ember.Route.extend({
             logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Snapchat_Logo.png/480px-Snapchat_Logo.png"
         },
         {
+            name: "Reddit",
+            color: "white",
+            logo: "http://vignette3.wikia.nocookie.net/soccerspirits/images/1/10/Reddit.png/revision/latest?cb=20141230145232"
+        },
+        {
             name: "Pinterest",
             color: "rgb(247, 156, 162)",
             logo: "http://www.homeloans.com.au/wp-content/uploads/2015/10/social-media-icon-pinterest.png"
@@ -42,7 +48,24 @@ export default Ember.Route.extend({
         {
             name: "Tumblr",
             color: "rgb(41, 80, 107)",
-            logo: "http://www.freeiconspng.com/uploads/tumblr-logo-icon-1.png"
+            logo: "http://www.freeiconspng.com/uploads/tumblr-logo-icon-1.png",
+            textColor: "rgb(220, 220, 220)"
+        },
+        {
+            name: "LinkedIn",
+            color: "rgb(30, 32, 34)",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
+            textColor: "white"
+        },
+        {
+            name: "Google+",
+            color: "rgb(0, 110, 197)",
+            logo: "http://www.freeiconspng.com/uploads/google-plus-logo-grey-white-hd-wallpaper-9.png"
+        },
+        {
+            name: "Email",
+            color: "rgb(100, 150, 255)",
+            logo: "http://icons.iconarchive.com/icons/cornmanthe3rd/squareplex/512/Communication-email-2-icon.png"
         }
         ];    
     }
