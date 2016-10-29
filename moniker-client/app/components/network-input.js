@@ -1,9 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    inputVal: "",
     actions: {
-        keyPressed: function() {
-            console.log("keyPressed");
+        keyUp: function() {
+            console.log(this.inputVal);
+            this.sendAction(this.model.name, 'inputVal ');
         }
     }
 });

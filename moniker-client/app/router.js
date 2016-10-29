@@ -9,7 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
     this.route('main', { path: '/' });
     this.route('page-not-found', { path: '/*wildcard' });
-    this.route('profile', { path: '/:moniker_id' });
+    this.route('profile', { path: '/:id' });
 });
 
 export default Router;
