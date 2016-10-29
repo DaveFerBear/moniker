@@ -1,11 +1,3 @@
-.network #loaderContainer { 
-    padding-right: 15px;
-    float: right;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .loader {
   margin: 60px auto;
   font-size: 10px;

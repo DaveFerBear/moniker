@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     actions: {
         keyUp: function() {
             console.log(this.inputVal);
-            this.sendAction(this.model.name, 'inputVal ');
+            this.sendAction('keyUp', this.get('attr.name'), this.inputVal); //send name and input value
         }
     }
 });
