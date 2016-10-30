@@ -94,7 +94,7 @@ export default Ember.Route.extend({
     
     actions: {
         keyUp: function(name, input) {
-            console.log('ApplicationKeyUp');
+            console.log(name+input);
         }
     }
 });
