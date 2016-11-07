@@ -24,6 +24,15 @@
 }
 
 .network #loaderContainer { 
-    float: center;
-    position: relative;
+    float: right;
+}
+
+.network .panel-body {
+    display: inline-block;
+    padding: 30px 10px;
+}
+
+.network #inputContainer {
+    width: calc(100% - 40px);
+    display: inline-block;
 }

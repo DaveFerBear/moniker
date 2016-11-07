@@ -7,9 +7,11 @@
             </h4>
         </div>
         <div class = "panel-body" style = "background-color: {{attr.color}}">
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon3">{{attr.inputText}}</span>
-                {{input value=inputVal key-up = "keyUp" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"}}
+            <div id = "inputContainer">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">{{attr.inputText}}</span>
+                    {{input value=inputVal key-up = "keyUp" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"}}
+                </div>
             </div>
             <div id = "loaderContainer">
                 <div class = "loader"></div>
