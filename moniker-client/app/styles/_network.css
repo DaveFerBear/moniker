@@ -1,0 +1,28 @@
+.network-container {
+    padding: 5px;
+}
+
+.network {
+    height: 160px;
+    margin: 0;
+    padding: 0;
+}
+
+.network img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    
+}
+
+.network #input {
+    float: center;
+    position: relative;
+}
+
+.network #loaderContainer { 
+    padding-right: 15px;
+    float: right;
+    position: relative;
+}
