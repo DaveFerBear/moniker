@@ -3,17 +3,19 @@
 }
 
 .network {
-    height: 160px;
     margin: 0;
     padding: 0;
 }
 
 .network img {
-    width: 50px;
-    height: 50px;
-    float: left;
-    position: relative;
-    
+    margin-right: 8px;
+    margin-top: -10px;
+    height: 40px;
+    float: right;
+}
+
+.network .header-input {
+    width: 60%;
 }
 
 .network #input {
@@ -22,7 +24,6 @@
 }
 
 .network #loaderContainer { 
-    padding-right: 15px;
-    float: right;
+    float: center;
     position: relative;
 }

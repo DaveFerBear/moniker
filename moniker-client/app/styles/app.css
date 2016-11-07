@@ -4,17 +4,10 @@
 .title {
     width: 100%;
     text-align: center;
-    background-color: rgb(230,230,230);
+    margin: 2vh 0;
 }
 
 .submit {
     width: 100%;
     text-align: center;
-    background-color: rgb(230,230,230);
-    vertical-align: middle;
-    padding: 30px;
-
-    border-radius: 25px;
-    border: 2px solid #AAA;
-    margin: 20px 0;
 }
