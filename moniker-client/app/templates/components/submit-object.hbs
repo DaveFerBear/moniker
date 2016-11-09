@@ -1,16 +1,15 @@
-<div class = "form-container">
+<div class = "submit form-container">
     <div class = "col-sm-10 col-xs-12 form-group has-success has-feedback">
         <div id = "inputContainer">
             <div class="input-group">
-                <span class="input-group-addon" id="basic-addon3">monikr.io/</span>
-                {{input value=inputVal key-up = "keyUp" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"}}
+                <span class="input-group-addon input-lg" id="basic-addon3">monikr.io/</span>
+                {{input value=inputVal key-up = "keyUp" type="text" class="form-control input-lg" id="basic-url" aria-describedby="basic-addon3"}}
             </div>
         </div>
     </div>
-    <div class = "col-sm-2 col-xs-12">
-        <button id = "submit-button" type="button" class="btn btn-default" aria-label="Left Align">
-            <span class="glyphicon glyphicon-arrow-right"></span>
-        </button>
+    <div id = "submit-button-container" class = "col-sm-2 col-xs-12">
+        {{gradient-button}}
     </div>
 </div>
+
 {{yield}}
