@@ -1,0 +1,38 @@
+.network-container {
+    padding: 5px;
+}
+
+.network {
+    margin: 0;
+    padding: 0;
+}
+
+.network img {
+    margin-right: 8px;
+    margin-top: -10px;
+    height: 40px;
+    float: right;
+}
+
+.network .header-input {
+    width: 60%;
+}
+
+.network #input {
+    float: center;
+    position: relative;
+}
+
+.network #loaderContainer { 
+    float: right;
+}
+
+.network .panel-body {
+    display: inline-block;
+    padding: 30px 10px;
+}
+
+.network #inputContainer {
+    width: calc(100% - 40px);
+    display: inline-block;
+}

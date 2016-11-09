@@ -2,6 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return this.store.findRecord('profile', 'test');
+        console.log(this.store.findRecord('profile', 'test'));
+        return;
+    },
+
+    actions: {
+        error(error, transition) {
+            if (error) {
+                if (error.status == '404') {
+                    return this.transitionTo('page-not-found');
+                } else {
+                    return console.log('error: ' + error);
+                }   
+            }
+        }
     }
 });
