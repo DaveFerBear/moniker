@@ -10,14 +10,11 @@
             <div id = "inputContainer">
                 <div class="input-group">
                     <span class="input-group-addon">{{attr.inputText}}</span>
-                    {{input value=inputVal key-up = "keyUp" type="text" class="form-control" id="basic-url"}}
+                    {{input value=inputVal key-up = "keyUp" type="text" class="form-control"}}
                 </div>
             </div>
-            <div style = "display: none" class = "loader-container">
-                <div class = "loader"></div>
-                
-            </div>
-            <div class = "checkmark">
+            <div class = "loader"></div>
+            <div class = "checkmark" style = "display: none">
                 <span class="glyphicon glyphicon-ok form-control-feedback"></span>
             </div>
         </div>
