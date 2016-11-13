@@ -106,6 +106,9 @@ export default Ember.Route.extend({
     actions: {
         keyUp: function(name, input) {
             console.log(name+': '+input);
+        },
+        submit: function() {
+            console.log('main-submit');
         }
     }
 });
