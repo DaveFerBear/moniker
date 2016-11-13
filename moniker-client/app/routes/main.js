@@ -2,7 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return [
+        return this.networks;    
+    },
+    networks: [
         {
             name: "Facebook",
             color: "rgb(1, 38, 119)",
@@ -100,15 +102,18 @@ export default Ember.Route.extend({
             input: null,
             valid: true
         }
-        ];    
-    },
-    
+    ],
     actions: {
         keyUp: function(name, input) {
-            console.log(name+': '+input);
+            for (var x = 0; x < this.networks.length; x++) {
+                if (name == this.networks[x].name) {
+                    this.networks[x].input = input;
+                }
+            }
         },
+
         submit: function() {
-            console.log('main-submit');
+            console.log(this.networks);
         }
     }
 });
