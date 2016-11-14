@@ -4,6 +4,7 @@ export default Ember.Route.extend({
     model() {
         return this.networks;    
     },
+    
     networks: [
         {
             name: "Facebook",
@@ -103,6 +104,7 @@ export default Ember.Route.extend({
             valid: true
         }
     ],
+
     actions: {
         keyUp: function(name, input) {
             for (var x = 0; x < this.networks.length; x++) {
