@@ -126,6 +126,16 @@ export default Ember.Route.extend({
         }
         return body;
     },
+    submitRequest: function(body) {
+        $.ajax({
+            type: "POST",
+            url: this.baseUrl + "create",
+            data: body,
+            success: function(data) {
+                console.log(data);
+            }
+        });
+    },
 
     actions: {
         urlKeyUp: function(input) {
@@ -154,15 +164,19 @@ export default Ember.Route.extend({
 
         submit: function() {
             var body = this.constructRequestBody();
-            console.log(body);
-            $.ajax({
-                type: "POST",
-                url: this.baseUrl + "create",
-                data: body,
-                success: function(data) {
-                    console.log(data);
-                }
-            });
+            if (this.monikerUrl == "") {
+                $.ajax({
+                    type: "GET",
+                    url: this.baseUrl + "validateURL/" + this.monikerUrl,
+                    success: function(data) {
+                        console.log(data);
+                        this.monikerUrl = data; //TODO: fix this
+                        this.submitRequest(body);
+                    }
+                });
+            } else {
+                this.submitRequest(body);
+            }
         }
     }
 });
