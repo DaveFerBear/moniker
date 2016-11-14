@@ -110,6 +110,23 @@ export default Ember.Route.extend({
     monikerUrl: "",
     baseUrl: "http://159.203.93.160/",
 
+    constructRequestBody: function() {
+        var body = {
+            URL: this.monikerUrl,
+            SocialData: []
+        };
+        for (var x = 0; x < this.networkData.length; x++) {
+            var data = {
+                SocialMediaSite: this.networkData[x].name,
+                SocialHandle: this.networkData[x].input
+            };
+            if (data.SocialHandle != null) {
+                body.SocialData.push(data);
+            }
+        }
+        return body;
+    },
+
     actions: {
         urlKeyUp: function(input) {
             console.log('urlKeyUp');
@@ -118,8 +135,8 @@ export default Ember.Route.extend({
                 $.ajax({
                     type: "GET",
                     url: this.baseUrl + "validateURL/" + this.monikerUrl,
-                    success: function() {
-                        console.log('success');
+                    success: function(data) {
+                        console.log(data);
                         $("#url-input").toggleClass("has-success has-error");
                     }
                 });
@@ -136,13 +153,14 @@ export default Ember.Route.extend({
         },
 
         submit: function() {
-            console.log('submit');
+            var body = this.constructRequestBody();
+            console.log(body);
             $.ajax({
                 type: "POST",
-                url: "http://159.203.93.160/createMoniker/" + baseUrl,
-                data: "test",
-                success: function() {
-                    console.log('success');
+                url: this.baseUrl + "create",
+                data: body,
+                success: function(data) {
+                    console.log(data);
                 }
             });
         }
