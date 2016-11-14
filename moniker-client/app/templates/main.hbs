@@ -3,12 +3,19 @@
         {{title-object}}
     </div>
     <div class = "row-fluid">
-        {{#each model as |network|}}
+        {{#each model.networks as |network|}}
                 {{network-input attr = network action="keyUp"}} 
         {{/each}}
     </div>
     <div class = "row-fluid">
-        {{submit-object action="submit"}}
+        <div class = "submit">
+            <div id = "url-input" class = "col-sm-10 col-xs-12 form-group has-feedback has-success">
+                {{submit-object action="urlKeyUp"}}
+            </div>
+            <div id = "submit-button-container" class = "col-sm-2 col-xs-12">
+                {{gradient-button action='submit'}}
+            </div>
+        </div>
     </div>
 </div> 
 {{outlet}}

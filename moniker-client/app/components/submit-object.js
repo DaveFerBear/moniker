@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    inputVal: "",
     actions: {
-        monikerKeyUp: function() {
-            console.log('validatemoniker');
+        urlKeyUp: function() {
+            this.sendAction('action', this.inputVal);
         },
         submit: function() {
             this.sendAction('action');

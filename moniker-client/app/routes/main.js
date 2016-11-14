@@ -2,10 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return this.networks;    
+        return {
+            networks: this.networkData
+            //add more UI properties
+        };    
     },
-    
-    networks: [
+
+    networkData: [
         {
             name: "Facebook",
             color: "rgb(1, 38, 119)",
@@ -104,18 +107,44 @@ export default Ember.Route.extend({
             valid: true
         }
     ],
+    monikerUrl: "",
+    baseUrl: "http://159.203.93.160/",
 
     actions: {
+        urlKeyUp: function(input) {
+            console.log('urlKeyUp');
+            this.monikerUrl = input;
+            if (input != "") {
+                $.ajax({
+                    type: "GET",
+                    url: this.baseUrl + "validateURL/" + this.monikerUrl,
+                    success: function() {
+                        console.log('success');
+                        $("#url-input").toggleClass("has-success has-error");
+                    }
+                });
+            }
+        },
+
         keyUp: function(name, input) {
-            for (var x = 0; x < this.networks.length; x++) {
-                if (name == this.networks[x].name) {
-                    this.networks[x].input = input;
+            console.log('keyUp');
+            for (var x = 0; x < this.networkData.length; x++) {
+                if (name == this.networkData[x].name) {
+                    this.networkData[x].input = input;
                 }
             }
         },
 
         submit: function() {
-            console.log(this.networks);
+            console.log('submit');
+            $.ajax({
+                type: "POST",
+                url: "http://159.203.93.160/createMoniker/" + baseUrl,
+                data: "test",
+                success: function() {
+                    console.log('success');
+                }
+            });
         }
     }
 });
