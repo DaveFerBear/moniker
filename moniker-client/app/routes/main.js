@@ -130,12 +130,12 @@ export default Ember.Route.extend({
     submitRequest: function(body) {
         console.log(body);
         console.log(this.baseUrl);
-        $.ajax({
-            type: "POST",
-            url: this.baseUrl + "create",
-            data: body,
-            success: function(data) {
-                console.log(data);
+        $.ajax('http://159.203.93.160/create', {
+            method: "POST",
+            data: JSON.stringify(body),
+            contentType: "application/json",
+            success: function(data){
+            console.log(data);
             }
         });
     },
