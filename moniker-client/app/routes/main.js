@@ -126,9 +126,10 @@ export default Ember.Route.extend({
         }
         return body;
     },
-    
+
     submitRequest: function(body) {
         console.log(body);
+        console.log(this.baseUrl);
         $.ajax({
             type: "POST",
             url: this.baseUrl + "create",
