@@ -126,7 +126,9 @@ export default Ember.Route.extend({
         }
         return body;
     },
+    
     submitRequest: function(body) {
+        console.log(body);
         $.ajax({
             type: "POST",
             url: this.baseUrl + "create",
@@ -146,7 +148,6 @@ export default Ember.Route.extend({
                     type: "GET",
                     url: this.baseUrl + "validateURL/" + this.monikerUrl,
                     success: function(data) {
-                        console.log(data);
                         $("#url-input").toggleClass("has-success has-error");
                     }
                 });
@@ -167,7 +168,7 @@ export default Ember.Route.extend({
             if (this.monikerUrl == "") {
                 $.ajax({
                     type: "GET",
-                    url: this.baseUrl + "validateURL/" + this.monikerUrl,
+                    url: this.baseUrl + "generateURL",
                     success: function(data) {
                         console.log(data);
                         this.monikerUrl = data; //TODO: fix this
